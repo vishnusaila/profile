@@ -25,7 +25,7 @@ import expenses from "@/assets/expenses.webp";
 import language from "@/assets/lan.jpeg";
 import stop from "@/assets/stop.png";
 import chat from "@/assets/chat.jpg";
-import student from "@/assets/student.webp";
+import student from "@/assets/student.jpg";
 
 const Projects = () => {
   const projects = [
@@ -136,7 +136,7 @@ const Projects = () => {
 
         <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
-          
+
         <section className="mb-20">
             <h2 className="text-3xl font-bold mb-10 text-center">Internship Projects at VtriageIT Solutions</h2>
             <div className="grid md:grid-cols-3 gap-8">
