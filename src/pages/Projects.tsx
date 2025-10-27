@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Award,
   
@@ -10,6 +11,9 @@ import {
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 
+import vtriage from "@/assets/vtriage.png";
+import viise from "@/assets/viise.png";
+import zentraa from "@/assets/zentra.png";
 
 import bg from "@/assets/project.avif";
 
@@ -130,8 +134,99 @@ const Projects = () => {
           </div>
         </section>
 
-      <main className="pt-24 pb-16">
+        <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
+          
+        <section className="mb-20">
+            <h2 className="text-3xl font-bold mb-10 text-center">Internship Projects at VtriageIT Solutions</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Vtriage IT Solutions",
+                  image: vtriage, // you can replace with screenshot
+                  description:
+                    "Developed a professional IT company website showcasing services, client testimonials, and contact forms. Focused on responsiveness and SEO optimization.",
+                  tools: ["React", "TypeScript", "Tailwind CSS", "Git", "GoDaddy", "PostgreSQL"],
+                  liveLink: "https://vtriageit.com/",
+                },
+                {
+                  title: "Viise Solutions",
+                  image:viise, // update if needed
+                  description:
+                    "Designed and developed Viise Solutions’ corporate site highlighting its technology services. Integrated smooth animations, responsive layouts, and contact management.",
+                  tools: ["React", "JavaScript", "MySQL", "EmailJS", "GitHub"],
+                  liveLink: "https://viisesolutions.com/",
+                },
+                {
+                  title: "Zentraa Technologies",
+                  image: zentraa, // update image link
+                  description:
+                    "Built a modern business website for Zentraa Technologies featuring dynamic service pages and user-friendly design for improved customer engagement.",
+                  tools: ["React", "Tailwind", "PostgreSQL", "Git", "BigRock"],
+                  liveLink: "https://zentraahub.com/",
+                },
+              ].map((project, idx) => (
+                <Card
+                  key={idx}
+                  className="overflow-hidden border-border hover:border-primary transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1"
+                >
+                  {/* Top Image */}
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+
+                  {/* Card Content */}
+                  <CardContent className="p-5">
+                    <h3 className="text-xl font-semibold mb-2 text-foreground dark:text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground dark:text-muted-foreground-dark mb-4">
+                      {project.description}
+                    </p>
+
+                    {/* Tools Badges */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tools.map((tool, i) => (
+                        <Badge
+                          key={i}
+                          variant="outline"
+                          className="dark:border-white dark:text-white text-xs px-2 py-1"
+                        >
+                          {tool}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    {/* Buttons */}
+                    <div className="flex justify-between">
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/80 transition-colors"
+                      >
+                        View Site
+                      </a>
+                      <a
+                        href="https://github.com/vishnusaila"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border border-primary text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary hover:text-white transition-colors"
+                      >
+                        GitHub
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+      
           {/* Header */}
           {/* 🔹 Hero Section with Background Image */}
           {/* 🔹 WordPress Projects Section */}
