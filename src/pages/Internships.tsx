@@ -13,7 +13,7 @@ const Internships = () => {
   const topInternship = {
     title: "Frontend Developer Intern",
     company: "VtriageIT Solutions",
-    duration: "May 2025 – September 2025",
+    duration: "Sep 2025 – Dec 2025",
     location: "Miyapur, Hyderabad",
     type: "Internship",
     responsibilities: [
